@@ -102,15 +102,13 @@ return obj;
  * For example, if getCarInfoByIndex is invoked with the inventory and the number 0,
  * it will return `This is a Lincoln Navigator`.
 */
-function getCarInfoByIndex(array, index) {
-  const inventory = {
-    [1, "Lincoln", "Navigator", 2009]
-    }
-    array: inventory[1],
-    index: inventory[2],
-    return `This is a ${array} ${index}`;
-}
 
+function getCarInfoByIndex(car_make,car_model) {
+  const carInfo = [1,'Lincoln','Navigator',2009];
+  car_make = carInfo[1];
+  car_model = carInfo[2];
+  return `This is a ${car_make} ${car_model}`;
+}
 /**
  * ### Challenge `getLastCarInfo`
  *
@@ -122,10 +120,15 @@ function getCarInfoByIndex(array, index) {
  * For example, if getLastCarInfo is invoked passing the inventory inside /data/inventory.js,
  * it will return `This is a Lincoln Town Car`.
 */
-function getLastCarInfo(/* code here */) {
-  /* code here */
-}
 
+function getLastCarInfo(array) {
+  const length= array.length-1;
+  return `This is a ${array[length].car_make} ${array[length].car_model}`;
+  }
+
+// for (let i = 0; i < array.length; i++){
+//       return `This is a ${} ${}`;
+//     }
 /**
  * ### Challenge `getCarInfoById`
  *
