@@ -141,7 +141,7 @@ function getLastCarInfo(array) {
 */
 function getCarInfoById(array,id) {
   const arr={
-    id: 'id',
+    id: '1',
     car_make: 'Lincoln',
     car_model: 'Navigator',
   };
@@ -157,9 +157,16 @@ function getCarInfoById(array,id) {
  *     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
  * sortCarInventory returns an inventory that is sorted by car_model, ascending [A-Z].
 */
-function sortCarInventory(/* code here */) {
-  /* code here */
-}
+function sortCarInventory(arr) {
+  for (let i = 0; i < arr.length; i++){
+    console.log(arr[i]);
+    arr.sort((a,b) => {if (a.car_model<b.car_model){
+      return -1};
+    if (a.car_model>b.car_model) {return 1};
+    return 0;
+    }
+    ) }return arr;}
+
 
 /**
  * ### Challenge `getModelYears`
