@@ -205,18 +205,13 @@ function getModelYears(arr) {
  * in the same order as they appear in the original inventory.
 */
 function getOlderCars(arr, max_year) {
-  // let arr2 = [];
   let arr3 = [];
   for (let i = 0; i < arr.length; i++){
-    // if (arr[i].car_year > 2000){
-    //   arr2.push(arr[i].car_year);
-    // }
     if (arr[i].car_year < max_year){
-      arr3.push(arr[1].car_year);
+      arr3.push(arr[i]);
     }
   }
-  // return arr2.sort();
-  return arr3.sort();
+  return arr3;
 }
 
 /**
