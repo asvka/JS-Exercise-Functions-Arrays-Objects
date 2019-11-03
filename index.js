@@ -216,7 +216,7 @@ function getOlderCars(arr, max_year) {
     } return arr3.sort();
   }
   // return arr2.sort();
-}
+} 
 
 /**
  * ### Challenge `getGermanCars`
